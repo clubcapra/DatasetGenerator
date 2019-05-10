@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.43687668, g: 0.48452842, b: 0.56478715, a: 1}
+  m_IndirectSpecularColor: {r: 0.45031637, g: 0.50033957, b: 0.5753129, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -54,7 +54,7 @@ LightmapSettings:
     m_EnableBakedLightmaps: 1
     m_EnableRealtimeLightmaps: 1
   m_LightmapEditorSettings:
-    serializedVersion: 10
+    serializedVersion: 12
     m_Resolution: 2
     m_BakeResolution: 40
     m_AtlasSize: 1024
@@ -62,6 +62,7 @@ LightmapSettings:
     m_AOMaxDistance: 1
     m_CompAOExponent: 1
     m_CompAOExponentDirect: 0
+    m_ExtractAmbientOcclusion: 0
     m_Padding: 2
     m_LightmapParameters: {fileID: 0}
     m_LightmapsBakeMode: 1
@@ -76,10 +77,16 @@ LightmapSettings:
     m_PVRDirectSampleCount: 32
     m_PVRSampleCount: 500
     m_PVRBounces: 2
+    m_PVREnvironmentSampleCount: 500
+    m_PVREnvironmentReferencePointCount: 2048
+    m_PVRFilteringMode: 2
+    m_PVRDenoiserTypeDirect: 0
+    m_PVRDenoiserTypeIndirect: 0
+    m_PVRDenoiserTypeAO: 0
     m_PVRFilterTypeDirect: 0
     m_PVRFilterTypeIndirect: 0
     m_PVRFilterTypeAO: 0
-    m_PVRFilteringMode: 1
+    m_PVREnvironmentMIS: 0
     m_PVRCulling: 1
     m_PVRFilteringGaussRadiusDirect: 1
     m_PVRFilteringGaussRadiusIndirect: 5
@@ -88,6 +95,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
+    m_ExportTrainingData: 0
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -137,21 +145,40 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 37847158}
   m_Enabled: 1
-  serializedVersion: 8
+  serializedVersion: 9
   m_Type: 1
-  m_Color: {r: 1, g: 0.98039216, b: 0.95686275, a: 1}
-  m_Intensity: 4
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 0.5
   m_Range: 20
   m_SpotAngle: 141.44327
+  m_InnerSpotAngle: 128.10136
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 1
+    m_Strength: 0.264
     m_Bias: 0.05
     m_NormalBias: 0.4
     m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
@@ -159,12 +186,15 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+  m_RenderingLayerMask: 1
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!4 &37847160
@@ -174,13 +204,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 37847158}
-  m_LocalRotation: {x: 0.6761194, y: -0, z: -0, w: 0.73679215}
+  m_LocalRotation: {x: -0.3214397, y: 0, z: 0, w: -0.9469301}
   m_LocalPosition: {x: 4.62, y: 11.13, z: -12.14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 85.082, y: 0, z: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: -322.5, y: 0, z: 0}
 --- !u!1 &83958745
 GameObject:
   m_ObjectHideFlags: 0
@@ -193,7 +223,7 @@ GameObject:
   - component: {fileID: 83958748}
   - component: {fileID: 83958747}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -252,11 +282,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 83958745}
   m_LocalRotation: {x: 0, y: -0.70710677, z: 0.70710677, w: 0}
-  m_LocalPosition: {x: 4.59, y: 3.56, z: -3.9}
+  m_LocalPosition: {x: 3.77, y: 3.56, z: -3.9}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 90, y: -90, z: 90}
 --- !u!1 &533572587
 GameObject:
@@ -269,7 +299,8 @@ GameObject:
   - component: {fileID: 533572590}
   - component: {fileID: 533572589}
   - component: {fileID: 533572588}
-  - component: {fileID: 533572591}
+  - component: {fileID: 533572592}
+  - component: {fileID: 533572593}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -297,9 +328,10 @@ Camera:
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_GateFitMode: 2
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
@@ -341,7 +373,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -17.551, y: -25.403002, z: 0}
---- !u!114 &533572591
+--- !u!114 &533572592
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -350,11 +382,37 @@ MonoBehaviour:
   m_GameObject: {fileID: 533572587}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81ff67222ef7e5c4da98fb49d0998cf1, type: 3}
+  m_Script: {fileID: 11500000, guid: fb02e8f20c9705546bbd4379ad665e9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 83958745}
+  label: {fileID: 83958745}
+  dataset: {fileID: 11400000, guid: 46f5332a3c6bda141a04020db8e3e3db, type: 2}
+  renderTexture: {fileID: 8400000, guid: a39fe0301abeca549b2661b101598958, type: 2}
+  labelMat: {fileID: 2100000, guid: a4b6353d7833e2b41a1cdff4b7930dcf, type: 2}
   debugMat: {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
+--- !u!114 &533572593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 533572587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86e83638111c7c548a3884dcf4619311, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRadius: 5
+  minRadius: 0.1
+  stepRadius: 12
+  maxDistance: 13
+  minDistance: 8
+  stepDistance: 5
+  maxOffsetRadius: 1
+  minOffsetRadius: 0.1
+  stepOffset: 12
+  random: 0.5
+  seed: 12345
 --- !u!1 &707475802
 GameObject:
   m_ObjectHideFlags: 0
@@ -368,7 +426,7 @@ GameObject:
   - component: {fileID: 707475804}
   - component: {fileID: 707475803}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -459,7 +517,7 @@ GameObject:
   - component: {fileID: 1724479729}
   - component: {fileID: 1724479728}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
