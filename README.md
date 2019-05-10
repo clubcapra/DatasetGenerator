@@ -9,7 +9,7 @@ Unity 2019.1f11
 
 Start the scene hazmat
 
-Press on space to start the gneration
+Press on space to start the generation
 
 Escape to stop the generation
 
